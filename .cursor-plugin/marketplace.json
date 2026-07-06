@@ -1,0 +1,18 @@
+{
+  "name": "sprites",
+  "owner": {
+    "name": "Fly.io",
+    "email": "support@fly.io"
+  },
+  "metadata": {
+    "description": "Manage remote Sprites development environments from Cursor.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "sprites",
+      "source": "./plugins/sprites",
+      "description": "Create, inspect, and operate remote Sprites environments from Cursor via the Sprites MCP server."
+    }
+  ]
+}
