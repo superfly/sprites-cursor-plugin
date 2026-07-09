@@ -8,7 +8,7 @@
     "email": "support@fly.io"
   },
   "homepage": "https://sprites.dev",
-  "repository": "https://github.com/fly-apps/sprites-cursor-plugin",
+  "repository": "https://github.com/superfly/sprites-cursor-plugin",
   "license": "MIT",
   "keywords": ["sprites", "development-environments", "mcp", "cursor", "fly"],
   "logo": "assets/sprites-logo.svg"

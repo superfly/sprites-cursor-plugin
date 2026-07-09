@@ -30,7 +30,7 @@ plugins/sprites/
 
 ## Related
 
-- Remote MCP listing: [`dev.sprites/mcp`](https://registry.modelcontextprotocol.io/v0/servers?search=dev.sprites/mcp) in the official MCP registry ([fly-apps/sprites-mcp](https://github.com/fly-apps/sprites-mcp))
+- Remote MCP listing: [`dev.sprites/mcp`](https://registry.modelcontextprotocol.io/v0/servers?search=dev.sprites/mcp) in the official MCP registry ([superfly/sprites-mcp](https://github.com/superfly/sprites-mcp))
 - Sprites: https://sprites.dev · Docs: https://docs.sprites.dev
 
 ## License
