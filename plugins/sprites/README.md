@@ -27,6 +27,12 @@ With this plugin enabled, you can ask Cursor to:
 - **MCP server** (`mcp.json`) — connects Cursor to `https://sprites.dev/mcp` (remote, OAuth-authenticated).
 - **Skill** (`skills/sprites`) — workflow and safety guidance for operating sprites from Cursor.
 
+## Usage attribution
+
+This plugin tags its requests to the Sprites MCP server as coming from Cursor, using the coarse, privacy-safe [`client-signals`](https://github.com/superfly/client-signals) headers. Two fixed values are sent — `cursor` as the client name, and a flag marking the request as non-terminal — so Fly.io can estimate how much Sprites traffic comes through Cursor.
+
+Nothing user-, machine-, or repository-specific is sent, the values never vary between installs, and the tag is advisory analytics only: it is never used for authentication, authorization, access control, gating, or rate-limiting.
+
 ## Learn more
 
 - Sprites: https://sprites.dev

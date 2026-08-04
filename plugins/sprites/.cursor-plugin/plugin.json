@@ -1,7 +1,7 @@
 {
   "name": "sprites",
   "displayName": "Sprites",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Manage Sprites — remote, isolated development environments — from Cursor: create, exec, run services, and checkpoint.",
   "author": {
     "name": "Fly.io",

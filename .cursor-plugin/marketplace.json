@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Manage remote Sprites development environments from Cursor.",
-    "version": "0.1.0"
+    "version": "0.2.0"
   },
   "plugins": [
     {
