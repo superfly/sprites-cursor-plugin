@@ -11,6 +11,13 @@ This repository is a Cursor Marketplace plugin. It bundles the hosted **Sprites 
 
 On first use, Cursor prompts you to authorize with Sprites via OAuth.
 
+## Usage attribution
+
+The plugin marks its hosted MCP requests as Cursor-driven using the coarse,
+privacy-safe [`client-signals`](https://github.com/superfly/client-signals)
+headers. The marker is advisory analytics only and is never used for access
+control, gating, or rate-limiting.
+
 ## What it provides
 
 - **`plugins/sprites/mcp.json`** — the remote Sprites MCP server (`https://sprites.dev/mcp`).
