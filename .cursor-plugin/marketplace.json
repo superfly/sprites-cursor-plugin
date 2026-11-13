@@ -12,7 +12,7 @@
     {
       "name": "sprites",
       "source": "./plugins/sprites",
-      "description": "Create, inspect, and operate remote Sprites environments from Cursor via the Sprites MCP server."
+      "description": "Create, inspect, and operate remote Sprites environments from Cursor via the Fly MCP server."
     }
   ]
 }
