@@ -15,7 +15,7 @@ For normal Sprites tasks, call the Sprites MCP tools directly. Do not use shell 
 
 If Sprites MCP tools are not available in the current tool list, say that the Sprites plugin MCP tools are not loaded in this session and ask the user to reload the plugin or restart Cursor. Do not try to work around missing plugin tools by registering another MCP server from the shell.
 
-OAuth is handled by Cursor when the Sprites MCP tools are invoked. If Cursor prompts for authorization, wait for the user to complete it, then retry the original MCP tool call once. Do not start a second login path from the shell.
+The plugin's `sprites` MCP server is the Fly MCP server at `https://mcp.fly.io`. OAuth is handled by Cursor when the Sprites MCP tools are invoked. If Cursor prompts for authorization, wait for the user to complete it, then retry the original MCP tool call once. Do not start a second login path from the shell.
 
 Keep user-facing progress concise. Report the result, not MCP registration details, local config checks, or CLI noise.
 
@@ -61,7 +61,7 @@ Inspect or operate a sprite:
 Keep these contexts distinct:
 
 - Cursor local workspace: the repository and shell where this conversation is running.
-- Sprites MCP server: the API Cursor uses to operate sprites.
+- Sprites MCP server (the Fly MCP server, registered as `sprites`): the API Cursor uses to operate sprites.
 - Sprite filesystem: the remote environment reached only through sprite-scoped tools.
 
 Do not assume Cursor's local shell is inside a sprite. To inspect or change a sprite, use Sprites MCP tools.

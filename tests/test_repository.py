@@ -35,13 +35,13 @@ class CursorPluginRepositoryTests(unittest.TestCase):
             "https://github.com/superfly/sprites-cursor-plugin",
         )
 
-    def test_mcp_server_uses_https(self) -> None:
+    def test_mcp_server_uses_fly_mcp_endpoint(self) -> None:
         config = load_json(self.plugin_root / "mcp.json")
         server = config["mcpServers"]["sprites"]
         parsed = urlparse(server["url"])
         self.assertEqual(parsed.scheme, "https")
-        self.assertEqual(parsed.netloc, "sprites.dev")
-        self.assertEqual(parsed.path, "/mcp")
+        self.assertEqual(parsed.netloc, "mcp.fly.io")
+        self.assertIn(parsed.path, ("", "/"))
 
 
 if __name__ == "__main__":

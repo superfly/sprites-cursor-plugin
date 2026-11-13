@@ -2,14 +2,18 @@
 
 The official [Cursor](https://cursor.com) plugin for [**Sprites**](https://sprites.dev) — sandboxed, checkpointable remote development environments you can create, run commands in, and manage services on, all from Cursor's agent.
 
-This repository is a Cursor Marketplace plugin. It bundles the hosted **Sprites MCP server** plus a skill that guides the agent through common sprite workflows. There is no server code here — the MCP server is operated by [Fly.io](https://fly.io) and reached remotely at `https://sprites.dev/mcp` over OAuth-authenticated HTTPS.
+This repository is a Cursor Marketplace plugin. It bundles the hosted **Fly MCP server**, which serves the Sprites tools, plus a skill that guides the agent through common sprite workflows. There is no server code here — the MCP server is operated by [Fly.io](https://fly.io) and reached remotely at `https://mcp.fly.io` over OAuth-authenticated HTTPS.
 
 ## Install
 
 - **Marketplace:** install the **Sprites** plugin from the Cursor Marketplace.
 - **From this repo:** point Cursor at this repository / the `plugins/sprites` plugin.
 
-On first use, Cursor prompts you to authorize with Sprites via OAuth.
+On first use, Cursor prompts you to authorize with Fly.io via OAuth. The consent screen lets you choose what to grant; the Fly MCP server can also expose other Fly.io tools besides the Sprites ones, depending on that choice.
+
+### Upgrading from the `sprites.dev/mcp` endpoint
+
+Earlier versions of this plugin connected to the Sprites MCP server at `https://sprites.dev/mcp`. We are transitioning to the new Fly MCP server, and the plugin now connects to it at `https://mcp.fly.io`. The MCP server is still named `sprites` and the Sprites tool names are unchanged, but the two endpoints have separate OAuth grants: after updating, you must authorize once more when Cursor prompts you.
 
 ## Usage attribution
 
@@ -50,7 +54,7 @@ server-side: `operator="agent", agent="cursor"` means the headers landed;
 
 ## What it provides
 
-- **`plugins/sprites/mcp.json`** — the remote Sprites MCP server (`https://sprites.dev/mcp`).
+- **`plugins/sprites/mcp.json`** — the remote Fly MCP server (`https://mcp.fly.io`), registered under the server name `sprites`.
 - **`plugins/sprites/skills/sprites`** — a skill with workflow and safety guidance for operating sprites.
 
 ## Repository layout
@@ -68,6 +72,7 @@ plugins/sprites/
 ## Related
 
 - Remote MCP listing: [`dev.sprites/mcp`](https://registry.modelcontextprotocol.io/v0/servers?search=dev.sprites/mcp) in the official MCP registry ([superfly/sprites-mcp](https://github.com/superfly/sprites-mcp))
+- Fly MCP guide: https://mcp.fly.io/guide.md
 - Sprites: https://sprites.dev · Docs: https://docs.sprites.dev
 
 ## License
